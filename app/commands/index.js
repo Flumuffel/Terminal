@@ -22,7 +22,7 @@ const SystemCommands = [
   {
     id: 'man',
     usage: 'man command',
-    description: 'show manual pages for a command',
+    description: 'zeige manual pages für einen command',
     args: 1,
     async exec(term, args) {
       const command = SystemCommands.find(c => c.id === args[0]);
@@ -49,7 +49,7 @@ const SystemCommands = [
     id: 'help',
     args: 0,
     async exec(term, _args) {
-      term.writeln('available commands:');
+      term.writeln('verfügbare commands:');
       // Add 3 tabs for spacing. Align each description to the first command description
       const firstCommandSpacing = SystemCommands[0].id.length + 12;
       for (const {id, description} of SystemCommands) {
@@ -70,7 +70,7 @@ export async function exec(userInput, term) {
 
   if (args.length > 0) {
     if (command.args === 0) {
-      term.writeln(colorize(TermColors.Red, `${command.id} does not accept arguments`));
+      term.writeln(colorize(TermColors.Red, `${command.id} nimmt dieses argument nicht an`));
       return true;
     }
 
@@ -81,7 +81,7 @@ export async function exec(userInput, term) {
     }
 
     if (command.args !== args.length) {
-      term.writeln(colorize(TermColors.Red, 'wrong arguments'));
+      term.writeln(colorize(TermColors.Red, 'falsche argumente'));
       term.writeln(`usage: ${command.usage}`);
     } else {
       await command.exec(term, args);
@@ -90,7 +90,7 @@ export async function exec(userInput, term) {
     if (command.args === 0) {
       await command.exec(term, args);
     } else {
-      term.writeln(colorize(TermColors.Red, 'wrong arguments'));
+      term.writeln(colorize(TermColors.Red, 'falsche argumente'));
       term.writeln(`usage: ${command.usage}`);
     }
   }
