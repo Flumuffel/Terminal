@@ -11,11 +11,11 @@ const cat = {
     for (const fileName of args) {
       const file = fileSystem.get(fileName);
       if (!file) {
-        term.writeln(colorize(TermColors.Red, '[error]: ') + `"${fileName}": No such a file or directory`);
+        term.writeln(colorize(TermColors.Red, '[error]: ') + `"${fileName}": Keine solche Datei oder Verzeichnis gefunden`);
         continue;
       } 
       if (!file.name.includes('.md')) {
-        term.writeln(colorize(TermColors.Red, '[error]: ') + `"${file.name}": file encoding not supported`);
+        term.writeln(colorize(TermColors.Red, '[error]: ') + `"${file.name}": file encoding nicht supported`);
         continue;
       }
       for (const line of file.content.split('\n')) {
