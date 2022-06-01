@@ -4,34 +4,14 @@ import fileSystem from "../file-system.js";
 
 const WebApps = [
   {
-    name: 'blog',
-    url: 'https://protiumx.dev/blog/'
-  },
-  {
-    name: 'github',
-    url: 'https://github.com/protiumx/'
-  },
-  {
-    name: 'instagram',
-    url: 'https://www.instagram.com/_protium/'
-  },
-  {
-    name: 'issues',
-    url: 'https://github.com/protiumx/protiumx.github.io/issues/'
-  },
-  {
-    name: 'linkedin',
-    url: 'https://www.linkedin.com/in/bdmayo/'
-  },
-  {
-    name: 'source',
-    url: 'https://github.com/protiumx/protiumx.github.io'
+    name: 'twitch',
+    url: 'https://twitch.tv/flumuffel'
   },
 ];
 
 const open = {
   id: "open",
-  description: 'open files or applications',
+  description: 'öffne files oder programme',
   usage: `\r\n\topen filename\r\n\topen [${WebApps.map(app => app.name).join(' | ')}]`,
   args: 1,
   async exec(term, args) {
@@ -47,7 +27,7 @@ const open = {
     }
    
     if (url === '') {
-      term.writeln(colorize(TermColors.Red, '[error]: ') + `"${args[0]}" no such file or application`);
+      term.writeln(colorize(TermColors.Red, '[error]: ') + `"${args[0]}" keine solche Datei oder Programm gefunden`);
       term.writeln(this.usage);
       return;
     }
