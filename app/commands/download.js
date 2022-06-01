@@ -6,7 +6,7 @@ const download = {
   id: "download",
   args: 1,
   usage: 'download filename',
-  description: 'download a file',
+  description: 'download eine datei',
   async exec(term, args) {
     const file = fileSystem.get(args[0]);
     if (!file) {
