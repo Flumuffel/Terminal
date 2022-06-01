@@ -4,7 +4,7 @@ import { sleep } from './utils.js';
 import { exec } from './commands/index.js';
 
 function commandNotFound(term) {
-  term.writeln(TermColors.Red + 'Command not found. Type "help" to list available commands');
+  term.writeln(TermColors.Red + 'Command nicht gefunden. Schreibe "help" um die list der verfügbaren commands zu bekommen');
 }
 
 function prompt(term) {
