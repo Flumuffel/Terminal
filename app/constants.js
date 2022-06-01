@@ -7,4 +7,4 @@ export const TermColors = {
   Reset: '\x1B[0m',
 };
 
-export const SHELL_PROMPT = TermColors.Purple + 'anonymous@protiumx.dev:~$ ' + TermColors.Reset;
+export const SHELL_PROMPT = TermColors.Purple + 'anonymous@flumuffel.de:~$ ' + TermColors.Reset;
