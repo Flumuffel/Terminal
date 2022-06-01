@@ -12,7 +12,6 @@ const whoami = {
     term.writeln(colorize(TermColors.Green, 'Host: ') + window.location.host);
     term.writeln(colorize(TermColors.Green, 'Derzeitige Position: ') + 'Ausbildung Informatik Systemtechnik');
     term.writeln(colorize(TermColors.Green, 'Standort: ') + 'Schweiz');
-    term.writeln(colorize(TermColors.Green, 'fav languages: ') + '[golang, rust, typescript]');
     term.writeln(colorize(TermColors.Green, 'Hobbies: ') + '[programmieren, streamen, spielen]');
     term.writeln(colorize(TermColors.Green, 'Letztes update: ') + LAST_UPDATE);
   },
