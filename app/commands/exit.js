@@ -7,7 +7,7 @@ const exit = {
   async exec(term, _args) {
     term.writeln('terminating session...');
     await sleep(1000);
-    window.location.href = 'https://www.youtube.com/watch?v=iik25wqIuFo';
+    window.location.href = 'https://twitch.tv/flumuffel';
   },
 };
 
